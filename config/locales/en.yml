@@ -1,0 +1,2 @@
+errors:
+  checkout_class_expected: 'Checkout class expected for Rule::Base.new'

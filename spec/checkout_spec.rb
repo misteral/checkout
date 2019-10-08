@@ -1,6 +1,11 @@
+# frozen_string_literal: true
+
 RSpec.describe Checkout do
-  it 'creates a student class' do
-    checkout = Checkout.new(pricing_rules)
-    expect(student).to be_kind_of(Checkout)
+  it '#products' do
+    expect(subject.products).to be_kind_of(Array)
+  end
+
+  it '#scan' do
+
   end
 end
