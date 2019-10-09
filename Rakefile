@@ -19,7 +19,6 @@ task :console do
   puts 'Current checkout default Rule Classes:'
   puts Checkout.new.default_rules
   puts ''
-  puts ''
   puts 'Example usage:'
   puts '    co = Checkout.new([Rules::BulkTshirt, Rules::BuyTwoGetOne])
     co.scan("VOUCHER")

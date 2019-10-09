@@ -1,6 +1,9 @@
 ## Installation
 
-`$ git clone git@github.com:misteral/checkout.git`
+```
+$ git clone git@github.com:misteral/checkout.git
+$ bundle install`
+```
 
 ## Usage
 ```
@@ -21,7 +24,7 @@ $ bundle exec rake console
 
 ## Test
 ```
-$ bundle exec rake
+$ bundle exec rspec .
 ```
 
 ## Classes Descriptions
