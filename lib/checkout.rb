@@ -2,8 +2,7 @@
 
 require 'json'
 require 'I18n'
-require 'pry'
-require 'product'
+require_relative 'product'
 
 Dir['./lib/rules/*.rb'].each { |file| require file }
 I18n.load_path << Dir[File.expand_path('config/locales') + '/*.yml']
@@ -20,7 +19,12 @@ class Checkout
     @items = []
     @adjustments = []
     @pricing_rules = pricing_rules
-    @products = Product.load_allowed_products
+    @products = Product.load_products
+  end
+
+  # Default rules classes
+  def default_rules
+    [Rules::BulkTshirt, Rules::BuyTwoGetOne]
   end
 
   # Add product to items and return product
@@ -51,7 +55,4 @@ class Checkout
     end
   end
 
-  def default_rules
-    [Rules::BulkTshirt, Rules::BuyTwoGetOne]
-  end
 end

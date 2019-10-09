@@ -16,7 +16,7 @@ class Product
   end
 
   # Load products from file and returns as array of Products
-  def self.load_allowed_products(file_name = './config/products.json')
+  def self.load_products(file_name = './config/products.json')
     parsed_products = JSON.parse(File.read(file_name))
 
     products = []
