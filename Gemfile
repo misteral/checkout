@@ -11,6 +11,7 @@ group :development do
 end
 
 group :test do
+  gem 'rake', '~> 13.0.0'
   gem 'rspec', '~> 3.8.0'
   gem 'simplecov', '~> 0.17.1'
 end
