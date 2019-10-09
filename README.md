@@ -2,7 +2,7 @@
 
 ```
 $ git clone git@github.com:misteral/checkout.git
-$ bundle install`
+$ bundle install
 ```
 
 ## Usage
