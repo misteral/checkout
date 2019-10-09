@@ -42,6 +42,7 @@ instance methods:
 
 #### Rules::Base
 Base class for checkout rules.
+
 params:
   * Array of Product as items in Checkout
 instance methods:
@@ -57,6 +58,7 @@ instance methods:
 
 #### Product
 Main product class.
+
 params:
   * hash of data, example: `Product.new('name' => 'name', 'code' => 'code', 'price' => 34)`
 
