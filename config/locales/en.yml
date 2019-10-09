@@ -1,2 +1,11 @@
-errors:
-  checkout_class_expected: 'Checkout class expected for Rule::Base.new'
+en:
+  errors:
+    checkout_class_expected: 'Checkout class expected for Rule::Base.new'
+    product_not_found: "Can't find product with code: %{code}"
+    product_duplication: "Duplicate product records %{finded}, parsed: %{parsed_product}"
+    products_not_found: No products in config/products.json
+    price_not_float: Price not Fload
+    product_invalid: "Not valid data for product, data: %{args}"
+    eligible_not_implemented: "Method 'eligible?' should be implemented in %{class_name}"
+    calculation_not_implemented: "Method 'calculation' should be implemented in %{class_name}"
+

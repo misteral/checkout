@@ -3,27 +3,29 @@
 module Rules
   class Error < StandardError; end
 
-  # Base class for chackout rules
+  # Base class for checkout rules
   class Base
-    def initialize(checkout)
-      raise Error,
-            I18n.t('errors.checkout_class_expected') unless checkout.is_a? Checkout
-
-      @checkout = checkout
+    def initialize(items)
+      @items = items
     end
 
-    def rule_adjustment
-      return unless eligible?
+    # Return calculation if eligible
+    def adjustment
+      return 0 unless eligible?
 
-      action || 0
+      calculation
     end
 
+    # Returns true if calculation can be implemented for this items
     def eligible?
-      raise 'eligible? should be implemented in a sub-class of Rule::Base'
+      raise Error, I18n.t('errors.eligible_not_implemented',
+                          class_name: self.class.name)
     end
 
-    def action
-      raise 'action should be implemented in a sub-class of Rule::Base'
+    # Returns amount of discount for items
+    def calculation
+      raise Error, I18n.t('errors.calculation_not_implemented',
+                          class_name: self.class.name)
     end
   end
 end
