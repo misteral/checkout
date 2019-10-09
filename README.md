@@ -13,6 +13,16 @@ co.scan("TSHIRT")
 price = co.total
 ```
 
+## Command Line Interface
+
+```
+$ bundle exec rake console
+```
+
+## Test
+```
+$ bundle exec rake
+```
 
 ## Classes Descriptions
 
@@ -53,13 +63,4 @@ params:
 methods:
   * load_products(file) - load products from json file
 
-## Command Line Interface
 
-```
-$ bundle exec rake console
-```
-
-## Test
-```
-$ bundle exec rake
-```
