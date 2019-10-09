@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require 'spec_helper'
+
 RSpec.describe Product do
   it 'new' do
     product = Product.new('name' => 'name', 'code' => 'code', 'price' => 34)

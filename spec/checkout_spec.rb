@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require 'spec_helper'
+
 RSpec.describe Checkout do
   it '#products' do
     expect(subject.products).to be_kind_of(Array)

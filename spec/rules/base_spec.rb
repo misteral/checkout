@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
-# test class
+require 'spec_helper'
+
 class TestRule < Rules::Base
   def eligible?
     true

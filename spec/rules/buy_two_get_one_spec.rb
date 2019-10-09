@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require 'spec_helper'
+
 RSpec.describe Rules::BuyTwoGetOne do
   let(:voucher) { Product.new(name: 'V', code: 'VOUCHER', price: 5) }
   let(:tshirt) { Product.new(name: 'T', code: 'TSHIRT', price: 20) }
