@@ -29,7 +29,7 @@ $ bundle exec rspec .
 
 ## Classes Descriptions
 
-#### Checkout
+### Checkout
 Checkout class for calculating totals with promotion rules.
 Default load allowable products from './config/products.json'.
 
@@ -43,7 +43,7 @@ instance methods:
   * products= - replace current allowable products;
   * items - current items(products) in Checkout.
 
-#### Rules::Base
+### Rules::Base
 Base class for checkout rules.
 
 params:
@@ -53,13 +53,13 @@ instance methods:
   * calculation - returns amount of discount for items;
   * adjustment - return calculation if eligible.
 
-#### Rules::BulkTshirt < Rules::Base
+### Rules::BulkTshirt < Rules::Base
 'Buy 3 or more TSHIRT items, the price per unit should be 19.00' rule.
 
-#### Rules::BuyTwoGetOne < Rules::Base
+### Rules::BuyTwoGetOne < Rules::Base
 'Buy two of the same product, get one free' rule.
 
-#### Product
+### Product
 Main product class.
 
 params:
